@@ -1,4 +1,11 @@
 import { LiveReload, Outlet, Links } from "@remix-run/react";
+import type { LinksFunction } from "@remix-run/node";
+import stylesUrl from "~/styles/global.css";
+
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: stylesUrl }];
+};
 
 export default function App() {
   return (
